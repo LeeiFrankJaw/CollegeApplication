@@ -1,0 +1,143 @@
+\documentclass[fontsize=11bp]{article}
+
+\usepackage{scrextend}
+\usepackage[english]{babel}
+%\usepackage{textcomp}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage[hmargin=1.25in,vmargin=1in]{geometry}
+\usepackage{graphicx,cancel}
+\usepackage{enumitem}
+%\usepackage{unicode-math}
+%\usepackage{mathpazo}
+%\usepackage{mathptmx}
+%\usepackage[scaled=0.92]{helvet}
+%\renewcommand{\rmdefault}{ptm}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}[Ligatures=Rare,LetterSpace=.7]
+\setsansfont{Arial}
+\setmonofont{Courier New}
+\let\hbar\relax
+%\setmathfont[math-style=ISO]{Cambria Math}
+\usepackage[lite,subscriptcorrection,nofontinfo]{mtpro2}
+%\usepackage[integrals]{wasysym}
+\usepackage{microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{blindtext}
+\usepackage{setspace}
+\setstretch{1.132575757575758}
+\setlength{\parindent}{.35in}
+%\newcommand*{\bpsize}{\fontsize{11bp}{13bp}\selectfont}
+%\AtBeginDocument{\bpsize}
+
+\newcommand*{\parasp}{\setlength{\parskip}{10bp plus 2bp minus 3bp}}
+\newcommand*{\noparasp}{\setlength{\parskip}{0bp plus 1bp}}
+\newcommand*{\setparasp}[1]{\setlength{\parskip}{#1}}
+\newcommand*{\pskip}{\vskip 10bp plus 2bp minus 3bp}
+%\renewcommand{\CancelColor}{\color{red}}
+%\newcommand*{\tcwm}{\textcompwordmark}
+\parasp
+
+\usepackage{titlesec}
+\titleformat*{\section}{\sffamily\fontsize{11bp}{13bp}\bfseries\selectfont}
+%\titleformat*{\section}{\sffamily\fontsize{14.4bp}{18bp}\bfseries\selectfont}
+%\titleformat*{\subsection}{\sffamily\fontsize{12bp}{14bp}\bfseries\selectfont}
+%\titleformat*{\subsubsection}{\sffamily\fontsize{11bp}{13bp}\bfseries\selectfont}
+\titlespacing*\section{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex -\parskip}
+%\titlespacing*\section{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex -\parskip}
+%\titlespacing*\subsection{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex -\parskip}
+%\titlespacing*\subsubsection{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex -\parskip}
+
+\usepackage{ifthen}
+\ifthenelse{\isundefined{\LEFTRIGHT}}{% then
+    \newcommand\LEFTRIGHT[3]{\left#1 #3 \right#2}%
+    \newcommand*{\paren}[1]{\LEFTRIGHT(){#1}}%
+    }{% else
+    \let\sqrtams\sqrt%
+    \let\sqrt\SQRT%
+    \let\paren\PARENS%
+    \let\leq\leqslant%
+    \let\le\leq%
+    \let\geq\geqslant%
+    \let\ge\geq}
+
+%\newcommand*{\paren}[1]{\left( #1 \right)}
+\newcommand*{\brkt}[1]{\LEFTRIGHT[]{#1}}
+\newcommand*{\brc}[1]{\LEFTRIGHT\{\}{#1}}
+\newcommand*{\bfrac}[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+\newcommand*{\unit}[1]{\,\mathrm{#1}}
+\newcommand*{\DeclareUnit}[2]{\newcommand*{#1}{\unit{#2}}}
+\DeclareUnit{\cm}{cm}
+\renewcommand*{\m}{\unit{m}}
+%\DeclareUnit{\m}{m}
+\DeclareUnit{\kg}{kg}
+\DeclareUnit{\s}{s}
+\DeclareUnit{\J}{J}
+\DeclareUnit{\mss}{m/s^2}
+\DeclareUnit{\Nm}{N\!\cdot\!m}
+\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\Rp}{(0,+\infty)}
+\newcommand*{\Rm}{(-\infty,0)}
+%\newcommand*{\deduce}{\mathrel{\Downarrow}}
+\newcommand*{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand*{\reason}[1]{\langle \, \text{#1} \, \rangle}
+
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\gammaf}{\Gamma}
+%\newcommand*{\diff}{\mathop{}\!d}
+\newcommand*{\diff}{\mathop{}\!\mathit{d}}
+%\newcommand*{\diff}{\mathop{}\!\mathrm{d}}
+\makeatletter
+\def\dd{\@ifstar\@ddstar\@dd}
+\newcommand*{\@dd}[2][]{\frac{\diff #1}{\diff #2}}
+\newcommand*{\@ddstar}[3][2]{\frac{\diff^{#1} #2}{\diff^{#1} #3}}
+\makeatother
+\newcommand*{\dx}{\diff x}
+\newcommand*{\dy}{\diff y}
+\newcommand*{\dt}{\diff t}
+\newcommand*{\du}{\diff u}
+\newcommand*{\dv}{\diff v}
+\newcommand*{\df}{\diff f}
+\newcommand*{\dtheta}{\diff \theta}
+\newcommand*{\fwdf}{\mathop{}\!\Delta}
+% all the following commands of the form \d[?]d? are deprecated in favor of
+% the general \dd command
+%\newcommand*{\ddx}{\frac{\diff}{\dx}}
+%\newcommand*{\dydx}{\frac\dy\dx}
+%\newcommand*{\dxdy}{\frac\dx\dy}
+%\newcommand*{\dzdx}{\frac{\diff z}\dx}
+%\newcommand*{\dzdy}{\frac{\diff z}\dy}
+%\newcommand*{\dfdx}{\frac\df\dx}
+%\newcommand*{\dfdy}{\frac\df\dy}
+%\newcommand*{\dfdt}{\frac\df\dt}
+%\newcommand*{\dfdu}{\frac\df\du}
+%\newcommand*{\dfdv}{\frac\df\dv}
+\newcommand*{\pdx}{\partial x}
+\newcommand*{\pdy}{\partial y}
+\newcommand*{\pdz}{\partial z}
+\newcommand*{\pdt}{\partial t}
+\newcommand*{\pdu}{\partial u}
+\newcommand*{\pdv}{\partial v}
+\newcommand*{\pdf}{\partial f}
+\newcommand*{\pdl}{\partial l}
+\newcommand*{\pdpd}[2][]{\frac{\partial #1}{\partial #2}}
+% all the following commands of the form \pd[?]pd? are deprecated in favor of
+% the general \pdpd command
+%\newcommand*{\pdpdx}{\frac\partial\pdx}
+%\newcommand*{\pdpdy}{\frac\partial\pdy}
+%\newcommand*{\pdpdz}{\frac\partial\pdz}
+%\newcommand*{\pdpdu}{\frac\partial\pdu}
+%\newcommand*{\pdpdv}{\frac\partial\pdv}
+%\newcommand*{\pdpdt}{\frac\partial\pdt}
+%\newcommand*{\pdzpdx}{\frac\pdz\pdx}
+%\newcommand*{\pdzpdy}{\frac\pdz\pdy}
+%\newcommand*{\pdzpdt}{\frac\pdz\pdt}
+%\newcommand*{\pdxpdt}{\frac\pdx\pdt}
+%\newcommand*{\pdypdt}{\frac\pdy\pdt}
+%\newcommand*{\pdfpdx}{\frac\pdf\pdx}
+%\newcommand*{\pdfpdy}{\frac\pdf\pdy}
+%\newcommand*{\pdfpdz}{\frac\pdf\pdz}
+%\newcommand*{\pdfpdt}{\frac\pdf\pdt}
+%\newcommand*{\pdfpdu}{\frac\pdf\pdu}
+%\newcommand*{\pdfpdv}{\frac\pdf\pdv}
+%\newcommand*{\pdfpdl}{\frac\pdf\pdl}

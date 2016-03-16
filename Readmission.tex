@@ -1,0 +1,96 @@
+% !TeX program = xelatex
+\input{preamble}
+
+\hypersetup{
+	pdfauthor = {Lei Zhao},
+	pdfcreator = {XeLaTeX}
+	}
+
+\usepackage[font={scriptsize,it}]{caption}
+\usepackage{metalogo,alltt,soul,tikz,standalone,wrapfig,csquotes}
+\usetikzlibrary{calc}
+\usepackage[backend=bibtex8,bibencoding=ascii,sorting=none]{biblatex}
+\renewcommand{\newunitpunct}{\addcomma\space}
+\addbibresource{personal.bib}
+
+\newcommand*{\onum}[1]{{\addfontfeatures{Numbers=OldStyle}#1}}
+%\newcommand*{\lspc}[2][3]{{\addfontfeature{LetterSpace=#1}#2}}
+\newcommand*{\TikZ}{PGF/\kern1bpTi\kern.5bp\textit{k}Z}
+\DeclareCiteCommand{\citejournaltitle}
+	{\usebibmacro{prenote}}
+	{\usebibmacro{journal}}
+	{\multicitedelim}
+	{\usebibmacro{postnote}}
+\newcommand*{\citejournal}[1]{\citejournaltitle{#1}~\cite{#1}}
+
+\begin{document}
+	\section*{Statement:}
+	After I left Cornell in the Spring of 2012, I lived in Shanghai for less than a month and enjoyed Shanghai Library. While I was exploring more on philosophy using the library resources, I got a phone call from a friend of mine, who worked in a study abroad service agency in Zhengzhou. He wanted me to work in the agency and I accepted. I left the job after two months since I found it is not that technology-involved and I could not learn much from it.
+	
+	In the following years, I lived in several cities in China (Beijing, Tongling, Shanghai) and continued to learn using available resources (books, MOOCs, websites). At the time, I thought I could land a job in IT industry after acquiring sufficient knowledge and skills and I spent quite an amount of time learning computer science.
+	
+	% notable books
+	
+	
+	% Try to learn Violin
+	\dots
+	
+	% my MOOCing experience
+	I successfully accomplished 21 MOOCs from various course providers, two of which are officially verified by Coursera. One was \textcite{LLI2}, the other was \textcite{FPPS}. The list of 21 courses can be found here~\cite{accredible}.
+	
+	% Hardware Software Interface / CSAPP
+	\dots
+	
+	% detail of the story with starworking
+	One day in the Shanghai Library, it was quite crowded as usual. Fortunately, I managed to find a seat. The guy next to me was coding with a fancy IDE on his MacBook Pro. At the moment, I thought he was just another programmer. I was curious about what he was doing and looked at his screen to find out. To my surprise, his code was written in Scala, a then rare programming language in China. I initiated the talk with him by saying that I just completed a related MOOC~\cite{FPPS} by the creator of Scala, Martin Odersky and really liked some ideas of the functional programming paradigm (FP). Possibly due to the rarity of FP in China as opposed to object-oriented programming paradigm (OOP), he also replied with surprise that he agreed but was more interested in making real-world application than just theory. He told me that already made an office automation web app with the language for his company and kept improving it. We then talked about some other computer-related stuff. Some time later, he revealed that he owned the company mentioned earlier and asked me whether I was interested in having an internship in his company. I did not accept right away since I wanted to focus on my study at the time. But we exchanged our contact info.
+	
+	This story was covered by \citejournal{GT}. \dots % accepted and worked
+	
+	% psychological description
+	I did not find the same theoretical depth I found in mathematics.
+	\dots
+	
+	\begin{wrapfigure}[8]{r}[.6in]{.4\textwidth}
+		\scalebox{.4}{ \input{CondProbEx} }
+		\caption{On the left, the blue region shows the doubles and the red region indicates the outcomes whose sum is 4 or less; on the right, the yellow region indicates outcomes with at least one 6 and the gray region shows the outcomes where two rolls differ.}
+		\label{fig:CondProbEx}
+	\end{wrapfigure}
+	
+	Last summer, I taught myself \LaTeX\ and became a frequent user. I almost abandoned Microsoft Word completely since then and used \LaTeX\ whenever I found suitable. In fact, this file was typeset in \XeLaTeX. I am able to typeset formulae like
+	\begin{align*}
+	\dd x \int_{t=\sin x}^{\tan x} e^{-t^2} \dt
+		&= \dd x \paren{\int_{t=0}^{\tan x} e^{-t^2} \dt -
+			\int_{t=0}^{\sin x} e^{-t^2} \dt} \\
+		&= \dd x \int_{t=0}^{\tan x} e^{-t^2} \dt
+			- \dd x \int_{t=0}^{\sin x} e^{-t^2} \dt \\
+		&= e^{-\tan^2 x} \cdot \sec^2 x - e^{-\sin^2 x} \cdot \cos x.
+	\end{align*}
+	With the \TikZ\ package, I could make graphics like the figure on the right.
+	
+	% Auditing at Fudan University
+	\dots
+	
+	\begin{alltt}
+	Work:
+	\st{Study abroad service agency}
+	Programming work in Starworking
+	
+	Study:
+	MOOCing (21 MOOC courses)
+	Self-learning by reading Textbooks
+	Try to learn Violin, failed.
+	\st{Learn LaTeX, This document was typeset in XeLaTeX. PGF/TikZ}
+	Auditing at Fudan University
+	\end{alltt}
+	
+	\section*{Intended Major and Career Plan:}
+	I intend to major in mathematics (and possibly have a second major or minor in physics). I want to stay in the academia and become an academic (if not a mathematician). This means I will seek master and doctoral degrees after graduation from Cornell.
+	
+	\section*{Term I wish to return:}
+	I wish to return on Block 1 of the \onum{2016-2017} academic year.
+	
+	\section*{Housing Preference:}
+	I do not have any particular housing preference, except that I want to make the habit of going to bed early.
+	
+	\printbibliography
+\end{document}
