@@ -1,3 +1,6 @@
-.aux
-.log
-.synctex.gz
+# ignore files generated during compilation process
+*.aux
+*.log
+*.synctex.gz
+*.docx
+Readmission(world).pdf
