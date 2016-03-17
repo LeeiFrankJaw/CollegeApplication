@@ -2,5 +2,12 @@
 *.aux
 *.log
 *.synctex.gz
+*.doc
 *.docx
-Readmission(world).pdf
+*.msg
+*.bbl
+*.blg
+*.out
+*.run.xml
+RDMCHECK.LST.pdf
+Readmission(word).pdf
