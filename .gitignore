@@ -6,6 +6,7 @@
 *.docx
 *.msg
 *.bbl
+*.bcf
 *.blg
 *.out
 *.run.xml
