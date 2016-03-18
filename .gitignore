@@ -10,5 +10,6 @@
 *.blg
 *.out
 *.run.xml
+*.txss
 RDMCHECK.LST.pdf
 Readmission(word).pdf
