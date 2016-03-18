@@ -10,8 +10,7 @@
 %\usepackage{unicode-math}
 %\usepackage{mathpazo}
 %\usepackage{mathptmx}
-%\usepackage[scaled=0.92]{helvet}
-%\renewcommand{\rmdefault}{ptm}
+%\usepackage{helvet}
 
 \usepackage[no-math]{fontspec}
 \setmainfont{Times New Roman}[Ligatures=Rare,LetterSpace=.7]
@@ -50,7 +49,7 @@
 
 \usepackage{ifthen}
 \ifthenelse{\isundefined{\LEFTRIGHT}}{% then
-    \newcommand\LEFTRIGHT[3]{\left#1 #3 \right#2}%
+    \newcommand*\LEFTRIGHT[3]{\left#1 #3 \right#2}%
     \newcommand*{\paren}[1]{\LEFTRIGHT(){#1}}%
     }{% else
     \let\sqrtams\sqrt%

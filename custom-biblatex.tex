@@ -1,0 +1,39 @@
+\renewcommand*{\newunitpunct}{\addcomma\space}
+\renewcommand*{\subtitlepunct}{\addcolon\thinspace}
+
+\DeclareCiteCommand{\citejournal}
+	{\usebibmacro{prenote}}
+	{\usebibmacro{journal}}
+	{\multicitedelim}
+	{\usebibmacro{postnote}}
+\newcommand*{\textcitejournal}[1]{\citejournal{#1}~\cite{#1}}
+
+\DeclareCiteCommand{\citetitle}
+	{\boolfalse{citetracker}%
+		\boolfalse{pagetracker}%
+		\usebibmacro{prenote}}
+	{\ifciteindex
+		{\indexfield{indextitle}}{}%
+	\iffieldundef{shorttitle}{%
+		\printfield[citetitle]{title}%
+		\iffieldundef{subtitle}{}{\subtitlepunct}%
+		\printfield[cititle]{subtitle}}
+	{\printfield[citetitle]{labeltitle}}}
+	{\multicitedelim}
+	{\usebibmacro{postnote}}
+\DeclareCiteCommand*{\citetitle}
+	{\boolfalse{citetracker}%
+		\boolfalse{pagetracker}%
+		\usebibmacro{prenote}}
+	{\ifciteindex
+		{\indexfield{indextitle}}{}%
+		\printfield[citetitle]{title}%
+		\iffieldundef{subtitle}{}{\subtitlepunct}%
+		\printfield[citetitle]{subtitle}}
+	{\multicitedelim}
+	{\usebibmacro{postnote}}
+\makeatletter
+\def\textcitetitle{\@ifstar\@textcitetitlestar\@textcitetitle}
+\def\@textcitetitle#1{\citetitle{#1}~\cite{#1}}
+\def\@textcitetitlestar#1{\citetitle*{#1}~\cite{#1}}
+\makeatother

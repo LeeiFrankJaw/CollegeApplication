@@ -10,19 +10,12 @@
 \usepackage{metalogo,alltt,soul,tikz,standalone,wrapfig,csquotes}
 \usetikzlibrary{calc}
 \usepackage[sorting=none]{biblatex}
-\renewcommand{\newunitpunct}{\addcomma\space}
-\renewcommand{\subtitlepunct}{\addcolon\space}
 \addbibresource{personal.bib}
+\input{custom-biblatex}
 
 \newcommand*{\onum}[1]{{\addfontfeatures{Numbers=OldStyle}#1}}
 %\newcommand*{\lspc}[2][3]{{\addfontfeature{LetterSpace=#1}#2}}
 \newcommand*{\TikZ}{PGF/\kern1bpTi\kern.5bp\textit{k}Z}
-\DeclareCiteCommand{\citejournaltitle}
-	{\usebibmacro{prenote}}
-	{\usebibmacro{journal}}
-	{\multicitedelim}
-	{\usebibmacro{postnote}}
-\newcommand*{\citejournal}[1]{\citejournaltitle{#1}~\cite{#1}}
 
 \begin{document}
 	\section*{Statement:}
@@ -45,7 +38,7 @@
 	% detail of the story with starworking
 	One day in the Shanghai Library, it was quite crowded as usual. Fortunately, I managed to find a seat. The guy next to me was coding with a fancy IDE on his MacBook Pro. At the moment, I thought he was just another programmer. I was curious about what he was doing and looked at his screen to find out. To my surprise, his code was written in Scala, a then rare programming language in China. I initiated the talk with him by saying that I just completed a related MOOC~\cite{FPPS} by the creator of Scala, Martin Odersky and really liked some ideas of the functional programming paradigm (FP). Possibly due to the rarity of FP in China as opposed to object-oriented programming paradigm (OOP), he also replied with surprise that he agreed but was more interested in making real-world application than just theory. He told me that already made an office automation web app with the language for his company and kept improving it. We then talked about some other computer-related stuff. Some time later, he revealed that he owned the company mentioned earlier and asked me whether I was interested in having an internship in his company. I did not accept right away since I wanted to focus on my study at the time. But we exchanged our contact info.
 	
-	This story was covered by \citejournal{GT}. \dots % accepted and worked
+	This story was covered by \textcitejournal{GT}. \dots % accepted and worked
 	
 	% psychological description
 	I did not find the same theoretical depth I found in mathematics.
