@@ -1,9 +1,9 @@
-% !TeX program = xelatex
+% !TeX program = lualatex
 \input{preamble}
 
 \hypersetup{
 	pdfauthor = {Lei Zhao},
-	pdfcreator = {XeLaTeX}
+	pdfcreator = {LuaLaTeX}
 	}
 
 \usepackage[font={scriptsize,it}]{caption}
@@ -18,6 +18,19 @@
 \newcommand*{\TikZ}{PGF/\kern1bpTi\kern.5bp\textit{k}Z}
 
 \begin{document}
+	\begin{alltt}
+		Work:
+		\st{Study abroad service agency}
+		Programming work in Starworking
+		
+		Study:
+		MOOCing (21 MOOC courses)
+		Self-learning by reading Textbooks
+		\st{Try to learn Violin, failed.}
+		\st{Learn LaTeX, This document was typeset in LuaLaTeX. PGF/TikZ}
+		Auditing at Fudan University
+	\end{alltt}
+	
 	\section*{Statement:}
 	After I left Cornell in the Spring of 2012, I lived in Shanghai for less than a month and enjoyed Shanghai Library. While I was exploring more on philosophy using the library resources, I got a phone call from a friend of mine, who worked in a study abroad service agency in Zhengzhou. He wanted me to work in the agency and I accepted. I left the job after two months since I found it is not that technology-involved and I could not learn much from it.
 	
@@ -30,10 +43,10 @@
 	I have been a fan of Bach since long and was deeply moved by his sonatas and partitas for solo violin (BWV 1001-1006). This motivated me to learn the violin. In the end of 2013, I took a course in violin. I played the guitar and thought I could transfer the knowledge of guitar to violin playing. Even though I have an instructor this time, violin is the hardest musical instrument I have encountered. Despite my unsuccessful attempt with violin, I really enjoyed the learning experience.
 	
 	% my MOOCing experience
-	I successfully accomplished 21 MOOCs from various course providers, two of which are officially verified by Coursera. One was \textcitetitle{LLI2}, the other was \textcitetitle{FPPS}. The list of 21 courses can be found here~\cite{accredible}.
+	Over the years, I successfully finished 21 MOOCs from various course providers, many of which were accomplished with distinction. Two of them are officially verified by Coursera. One was \textcitetitle{LLI2}, the other was \textcitetitle{FPPS}. The list of those 21 courses and correspondent statements of accomplishment can be found on \textit{CourseFinder.io}~\cite{accredible}.
 	
 	% Hardware Software Interface / CSAPP
-	\dots
+	I want to mention two MOOCs specifically here. The first is \textcitetitle{HSI}. It is 
 	
 	% detail of the story with starworking
 	One day in the Shanghai Library, it was quite crowded as usual. Fortunately, I managed to find a seat. The guy next to me was coding with a fancy IDE on his MacBook Pro. At the moment, I thought he was just another programmer. I was curious about what he was doing and looked at his screen to find out. To my surprise, his code was written in Scala, a then rare programming language in China. I initiated the talk with him by saying that I just completed a related MOOC~\cite{FPPS} by the creator of Scala, Martin Odersky and really liked some ideas of the functional programming paradigm (FP). Possibly due to the rarity of FP in China as opposed to object-oriented programming paradigm (OOP), he also replied with surprise that he agreed but was more interested in making real-world application than just theory. He told me that already made an office automation web app with the language for his company and kept improving it. We then talked about some other computer-related stuff. Some time later, he revealed that he owned the company mentioned earlier and asked me whether I was interested in having an internship in his company. I did not accept right away since I wanted to focus on my study at the time. But we exchanged our contact info.
@@ -50,7 +63,7 @@
 		\label{fig:CondProbEx}
 	\end{wrapfigure}
 	
-	Last summer, I taught myself \LaTeX\ and became a frequent user. I almost abandoned Microsoft Word completely since then and used \LaTeX\ whenever I found suitable. In fact, this file was typeset in \XeLaTeX. I am able to typeset formulae like
+	Last summer, I taught myself \LaTeX\ and became a frequent user. I almost abandoned Microsoft Word completely since then and used \LaTeX\ whenever I found suitable. In fact, this file was typeset in \LuaLaTeX\ and source code can be found on \textit{GitHub.com}~\cite{Readmission}. I am able to typeset formulae like
 	\begin{align*}
 	\dd x \int_{t=\sin x}^{\tan x} e^{-t^2} \dt
 		&= \dd x \paren{\int_{t=0}^{\tan x} e^{-t^2} \dt -
@@ -63,19 +76,6 @@
 	
 	% Auditing at Fudan University
 	\dots
-	
-	\begin{alltt}
-	Work:
-	\st{Study abroad service agency}
-	Programming work in Starworking
-	
-	Study:
-	MOOCing (21 MOOC courses)
-	Self-learning by reading Textbooks
-	Try to learn Violin, failed.
-	\st{Learn LaTeX, This document was typeset in XeLaTeX. PGF/TikZ}
-	Auditing at Fudan University
-	\end{alltt}
 	
 	\section*{Intended Major and Career Plan:}
 	I intend to double major in mathematics and physics. I still love computer science and there is a lot more to learn in the field. But with the double major, I do not know if I have enough time and effort for it. In addition, there are general requirements to meet.

@@ -11,6 +11,9 @@
 *.out
 *.run.xml
 *.txss
+*.xdv
+*.dvi
+*.ps
 Readmission-blx.bib
 RDMCHECK.LST.pdf
 Readmission(word).pdf
