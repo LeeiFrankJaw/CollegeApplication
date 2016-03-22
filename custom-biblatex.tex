@@ -1,5 +1,5 @@
 \renewcommand*{\newunitpunct}{\addcomma\space}
-\renewcommand*{\subtitlepunct}{\addcolon\thinspace}
+\renewcommand*{\subtitlepunct}{\addcolon\space}
 
 \DeclareCiteCommand{\citejournal}
 	{\usebibmacro{prenote}}
@@ -14,11 +14,11 @@
 		\usebibmacro{prenote}}
 	{\ifciteindex
 		{\indexfield{indextitle}}{}%
-	\iffieldundef{shorttitle}{%
-		\printfield[citetitle]{title}%
-		\iffieldundef{subtitle}{}{\subtitlepunct}%
-		\printfield[cititle]{subtitle}}
-	{\printfield[citetitle]{labeltitle}}}
+		\iffieldundef{shorttitle}{%
+			\printfield[citetitle]{title}%
+			\iffieldundef{subtitle}{}{\subtitlepunct}%
+			\printfield[citetitle]{subtitle}}
+		{\printfield[noformat]{labeltitle}}}
 	{\multicitedelim}
 	{\usebibmacro{postnote}}
 \DeclareCiteCommand*{\citetitle}
