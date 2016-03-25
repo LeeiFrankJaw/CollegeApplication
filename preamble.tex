@@ -27,8 +27,10 @@
 \usepackage{setspace}
 \setstretch{1.132575757575758}
 \setlength{\parindent}{18bp} %{.35in}
-%\newcommand*{\bpsize}{\fontsize{11bp}{13bp}\selectfont}
-%\AtBeginDocument{\bpsize}
+\frenchspacing
+
+\newcommand*{\onum}{\addfontfeatures{Numbers=OldStyle}}
+\newcommand*{\lnum}{\addfontfeatures{Numbers=Lining}}
 
 \newcommand*{\parasp}{\setlength{\parskip}{10bp plus 2bp minus 3bp}}
 \newcommand*{\noparasp}{\setlength{\parskip}{0bp plus 1bp}}

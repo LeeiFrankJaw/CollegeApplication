@@ -1,7 +1,8 @@
-% !TeX program = lualatex
+% !TeX program = xelatex
 \input{preamble}
 
 \hypersetup{
+	pdftitle = {Readmission Letter},
 	pdfauthor = {Lei Zhao},
 	pdfcreator = {LuaLaTeX}
 	}
@@ -13,26 +14,26 @@
 \addbibresource{personal.bib}
 \input{custom-biblatex}
 
-\newcommand*{\onum}[1]{{\addfontfeatures{Numbers=OldStyle}#1}}
-%\newcommand*{\lnum}[1]{{\addfontfeatures{Numbers=Lining}#1}}
 \newcommand*{\TikZ}{PGF/\kern1bpTi\kern.5bp\textit{k}Z}
 
 \begin{document}
-	\begin{alltt}
-		Work:
-		\st{Study abroad service agency}
-		Programming work in Starworking
-		
-		Study:
-		\st{MOOCing (21 MOOCs)}
-		\st{Self-learning by reading Textbooks}
-		\st{Try to learn Violin, failed.}
-		\st{Learn LaTeX, This document was typeset in LuaLaTeX. PGF/TikZ}
-		Auditing at Fudan University
-	\end{alltt}
+%	\begin{alltt}
+%		Work:
+%		\st{Study abroad service agency}
+%		\st{Programming work in Starworking}
+%		
+%		Study:
+%		\st{MOOCing (21 MOOCs)}
+%		\st{Self-learning by reading Textbooks}
+%		\st{Try to learn Violin, failed.}
+%		\st{Learn LaTeX, This document was typeset in LuaLaTeX. PGF/TikZ}
+%		Auditing at Fudan University
+%	\end{alltt}
+
+	\onum
 	
 	\section*{Statement:}
-	After I left Cornell in the spring of \onum{2012}, I lived in Shanghai for less
+	After I left Cornell in the spring of 2012, I lived in Shanghai for less
 	than a month and enjoyed Shanghai Library. While I was exploring more on
 	philosophy using the library resources, I got a phone call from a friend of
 	mine, who worked in a study abroad service agency in Zhengzhou. He wanted me to
@@ -41,37 +42,37 @@
 	
 	In the following years, I lived in several cities in China (Beijing, Tongling,
 	Shanghai) and continued to learn using available resources (books, \textsc{mooc}s,
-	websites). At the time, I thought I could land a job in IT industry after
+	websites). At the time, I thought I could land a job in \textsc{it} industry after
 	acquiring sufficient knowledge and skills and I spent quite an amount of time
 	learning computer science.
 	
 	% notable books
 	I benefited a lot from learning computer organization by reading
 	\textcite{COA8e}, who is also one of my favorites computer science textbook
-	author. Meanwhile, I learned how to program in C by reading \textcite{K&R}. I became interested in how computer works on a fundamental level and
-	spent a lot time with \textcite{LCDF}, which covers the fundamentals of digital
-	circuits. It was such a pleasant experience to see how combinatorial and
-	sequential logic works. I wanted to know more circuit theory and explored more
-	on it. The more I learned, The more I wanted to dig deeper into the fundamental
-	level. I believe I cannot understand how computers work without knowing the
-	underlying physics (esp.~electromagnetism). However, physics is a hard subject
-	to explore on my own and I encountered numerous difficulties without
-	instructors.
+	author. Meanwhile, I learned how to program in C by reading \textcite{K&R}. I
+	became interested in how computer works on a fundamental level and spent a lot
+	time with \textcite{LCDF}, which covers the fundamentals of digital circuits.
+	It was such a pleasant experience to see how combinatorial and sequential logic
+	works. I wanted to know more circuit theory and explored more on it. The more I
+	learned, The more I wanted to dig deeper into the fundamental level. I believe
+	I cannot understand how computers work without knowing the underlying physics
+	(esp.~electromagnetism). However, physics is a hard subject to explore on my
+	own and I encountered numerous difficulties without instructors.
 	
 	% Try to learn Violin
 	I have been a fan of Bach since long and was deeply moved by his sonatas and
-	partitas for solo violin (\textsc{bwv} \onum{1001-1006}). This motivated me to
-	learn the violin. In the end of \onum{2013}, I took a course in violin. I
+	partitas for solo violin (\textsc{bwv} 1001-1006). This motivated me to
+	learn the violin. In the end of 2013, I took a course in violin. I
 	played the guitar and thought I could transfer the knowledge of guitar to
 	violin playing. Even though I have an instructor this time, violin is the
 	hardest musical instrument I have encountered. Despite my unsuccessful attempt
 	with violin, I really enjoyed the learning experience.
 	
 	% my MOOCing experience
-	Over the years, I successfully finished \onum{21} \textsc{mooc}s from various
+	Over the years, I successfully finished 21 \textsc{mooc}s from various
 	course providers, many of which were accomplished with distinction. Two of them
 	are officially verified by Coursera. One was \textcitetitle{LLI2}, the other
-	was \textcitetitle{FPPS}. The list of those \onum{21} courses and correspondent
+	was \textcitetitle{FPPS}. The list of those 21 courses and correspondent
 	statements of accomplishment can be found on
 	\textit{CourseFinder}~\cite{accredible}.
 	
@@ -95,7 +96,7 @@
 	through Taylor series.
 	
 	% detail of the story with starworking
-	One day in \onum{2014}, it was quite crowded as usual in the Shanghai Library.
+	One day in 2014, it was quite crowded as usual in the Shanghai Library.
 	Fortunately, I managed to find a seat. The guy next to me was coding with a
 	fancy \textsc{ide} on his MacBook Pro. At the moment, I thought he was just
 	another programmer. I was curious about what he was doing and looked at his
@@ -113,11 +114,21 @@
 	having an internship in his company. I did not accept right away since I wanted
 	to focus on learning new things at the time, but we exchanged our contact info.
 	
-	However, some months later, I wanted to examine what I had learned and the best way to do it was through real work experience. I contacted the aftermentioned man to see if I was still able to intern at his company and he accepted.
-	The This story was covered by \textcitejournal{GT}.
+	However, some months later, I wanted to examine what I had learned and the best
+	way to do it was through internship. I contacted the aforementioned man to see
+	if I was still able to intern at his company and he accepted. I worked there as
+	a programmer for three months and gained some real project experience. This
+	story was covered by \textcitejournal{GT}.
+	
+	What I benefited the most from this internship is not any specific skills
+	related to \textsc{it} but the self-discovery that I have an aptitude for
+	academics, specifically mathematics. I am more interested in how things work
+	rather than how to make things only for the immediate profits. If I were to
+	learn how to drive, I would care about not only how to turn the wheel but also
+	what goes under the hood.
 	
 	\begin{wrapfigure}[8]{r}[.6in]{.4\textwidth}
-		\scalebox{.4}{ \input{CondProbEx} }
+		\scalebox{.4}{ \lnum \input{CondProbEx} }
 		\caption{On the left, the blue region shows the doubles and the red region
 			indicates the outcomes whose sum is 4 or less; on the right, the yellow region
 			indicates outcomes with at least one 6 and the gray region shows the outcomes
@@ -138,11 +149,24 @@
 		&= e^{-\tan^2 x} \cdot \sec^2 x - e^{-\sin^2 x} \cdot \cos x.
 	\end{align*}
 	With the \TikZ\ package, I could make graphics like the figure on the right.
+	Many standard computer tools (like \LaTeX\ and \textsc{gnu} toolchain) come as
+	free and open source software (\textsc{foss}) and I came to know the underlying
+	philosophy~\cite{free-sw} of it by this way. That is one of numerous benefits
+	by studying computer science.
+	
+%	\pagebreak
 	
 	% psychological description
+	That said, I did not find in computer science the same theoretical depth I
+	found in mathematics and physics. Don't get me wrong. I did not mean all
+	computer science and just most computer science curricula are not for
+	theoretical computer scientists.
+	
 	% Auditing at Fudan University
-	I did not find the same theoretical depth I found in mathematics.
-	\dots
+	I did not know that it is permissible and free to audit at a Chinese university
+	until last fall. Hence I audited two courses at Fudan University, being
+	\textit{mathematical analysis \Rn{1}} and \textit{advanced linear algebra
+		\Rn{1}} respectively.
 	
 	\section*{Intended Major and Career Plan:}
 	I intend to double major in mathematics and physics. I still love computer
@@ -151,8 +175,8 @@
 	there are general requirements to meet.
 	
 	If possible, I want to skip some lower division courses in mathematics and
-	computer science like \textsc{mat} \onum{122}, \textsc{mat} \onum{221},
-	\textsc{csc} \onum{140}, \textsc{csc} \onum{151}. Due to my strong interest in
+	computer science like \textsc{mat} 122, \textsc{mat} 221,
+	\textsc{csc} 140, \textsc{csc} 151. Due to my strong interest in
 	mathematics, I will definitely have a wonderful time with mathematics. Since I
 	do not have much background in physics, I will probably have a very hard time
 	with it. But I like challenges; hard courses just turn me on and easy courses
@@ -163,7 +187,7 @@
 	Cornell.
 	
 	\section*{Term I wish to return:}
-	I wish to return on the block \onum{1} of the \onum{2016-2017} academic year.
+	I wish to return on the block 1 of the 2016-2017 academic year.
 	
 	\section*{Housing Preference:}
 	I do not have any particular housing preference, except that I want to make the

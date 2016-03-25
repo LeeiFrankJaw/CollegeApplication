@@ -37,3 +37,6 @@
 \def\@textcitetitle#1{\citetitle{#1}~\cite{#1}}
 \def\@textcitetitlestar#1{\citetitle*{#1}~\cite{#1}}
 \makeatother
+\appto{\Rnfont}{\scshape}
+%\appto{\bibfont}{\addfontfeatures{Numbers=OldStyle}}
+\appto{\citesetup}{\normalfont \normalsize}
